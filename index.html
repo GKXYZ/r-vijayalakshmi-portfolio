@@ -10,7 +10,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-SV8FY702D3');
     </script>
     <title>R Vijayalakshmi | HR Professional</title>
@@ -18,174 +17,562 @@
         content="Portfolio of R Vijayalakshmi, an HR Executive specializing in HR Operations and HRMS.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-
-    <!-- Navigation (Simple) -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">R Vijayalakshmi</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">R<span class="logo-dot">.</span>Vijayalakshmi</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#tools" class="nav-link">Tools</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-sun sun-icon"></i>
+                <i class="fas fa-moon moon-icon"></i>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <header class="hero" id="home">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
         <div class="container hero-content">
-            <h1>R Vijayalakshmi</h1>
-            <h2>HR Executive | HR Operations | HRMS (ZingHR)</h2>
-            <p class="hero-intro">MBA in Human Resources & Marketing with 1+ year experience in HRMS support and HR
-                operations.</p>
-            <p class="hero-location"><i class="fas fa-map-marker-alt"></i> Bangalore, India | Open to Remote</p>
-            <div class="hero-buttons">
-                <a href="R_Vijayalakshmi_Resume.pdf" class="btn btn-primary" download target="_blank">
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
-
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            <div class="hero-text" data-animate="fade-right">
+                <span class="hero-greeting">Hello, I'm</span>
+                <h1 class="hero-name">R Vijayalakshmi</h1>
+                <div class="hero-title-wrapper">
+                    <h2 class="hero-title">HR Executive | HR Operations | HRMS (ZingHR)</h2>
+                </div>
+                <p class="hero-description">MBA in Human Resources & Marketing with 1+ year experience in HRMS support and HR
+                    operations.</p>
+                <div class="hero-meta">
+                    <span class="hero-location">
+                        <i class="fas fa-map-marker-alt"></i> Bangalore, India
+                    </span>
+                    <span class="hero-status">
+                        <span class="status-dot"></span> Open to Remote
+                    </span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="R_Vijayalakshmi_Resume.pdf" class="btn btn-primary" download target="_blank">
+                        <i class="fas fa-download"></i> 
+                        <span>Download Resume</span>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://www.linkedin.com/in/r-vijayalakshmi-40928a226" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:vijjir5778@gmail.com" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+919482275957" class="social-link" aria-label="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image" data-animate="fade-left">
+                <div class="image-wrapper">
+                    <div class="image-border"></div>
+                    <div class="profile-frame">
+                        <img src="assets/images/profile.jpg" alt="R Vijayalakshmi - HR Professional" class="profile-image">
+                    </div>
+                    <div class="floating-badge badge-1">
+                        <i class="fas fa-award"></i>
+                        <span>MBA Graduate</span>
+                    </div>
+                    <div class="floating-badge badge-2">
+                        <i class="fas fa-briefcase"></i>
+                        <span>1+ Years Exp</span>
+                    </div>
+                </div>
             </div>
         </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </a>
     </header>
 
     <!-- About Section -->
     <section id="about" class="section about-section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-subtitle">Get To Know</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
             <div class="about-content">
-                <p>
-                    I am a dedicated and results-oriented MBA graduate specializing in Human Resources and Marketing.
-                    With over a year of professional experience at ZingHR, I have gained robust expertise in HRMS
-                    implementation,
-                    customer support, and HR operations. My role has equipped me with a deep understanding of HR
-                    workflows,
-                    employee self-service systems, and the technical nuances of HRIS platforms.
-                </p>
-                <p>
-                    I excel in cross-functional coordination, stakeholder management, and resolving complex HRMS issues
-                    to ensure seamless operations.
-                    I am passionate about optimizing HR processes and enhancing employee experiences. Currently, I am
-                    seeking opportunities
-                    as an HR Executive, HR Operations Specialist, or Talent Acquisition professional to contribute to a
-                    growth-oriented organization.
-                </p>
+                <div class="about-stats" data-animate="fade-right">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>1+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>HRMS</h3>
+                            <p>Expert</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>MBA</h3>
+                            <p>HR & Marketing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text" data-animate="fade-left">
+                    <p>
+                        I am a dedicated and results-oriented MBA graduate specializing in Human Resources and Marketing.
+                        With over a year of professional experience at ZingHR, I have gained robust expertise in HRMS
+                        implementation,
+                        customer support, and HR operations. My role has equipped me with a deep understanding of HR
+                        workflows,
+                        employee self-service systems, and the technical nuances of HRIS platforms.
+                    </p>
+                    <p>
+                        I excel in cross-functional coordination, stakeholder management, and resolving complex HRMS issues
+                        to ensure seamless operations.
+                        I am passionate about optimizing HR processes and enhancing employee experiences. Currently, I am
+                        seeking opportunities
+                        as an HR Executive, HR Operations Specialist, or Talent Acquisition professional to contribute to a
+                        growth-oriented organization.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-check-circle"></i>
+                            <span>HRMS Implementation</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Customer Support</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-check-circle"></i>
+                            <span>HR Operations</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Stakeholder Management</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="section bg-light">
+    <section id="experience" class="section experience-section">
         <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-subtitle">My Journey</span>
+                <h2 class="section-title">Professional Experience</h2>
+            </div>
+            <div class="experience-timeline">
                 <!-- Experience Item 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="job-header">
-                            <h3>Customer Support Executive</h3>
-                            <span class="company">ZingHR</span>
-                            <span class="date">Nov 2025 – Present</span>
+                <div class="timeline-item" data-animate="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div class="company-logo">
+                                <img src="assets/images/ZingHr.png" alt="ZingHR Logo">
+                            </div>
+                            <div class="job-meta">
+                                <h3 class="job-title">Customer Support Executive</h3>
+                                <span class="company-name">ZingHR</span>
+                                <div class="job-period">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>Nov 2025 – Present</span>
+                                    <span class="current-badge">Current</span>
+                                </div>
+                            </div>
                         </div>
-                        <ul class="job-details">
-                            <li>Provided comprehensive HRMS support covering modules such as Leave, Attendance, Payroll,
-                                and Employee Self-Service (ESS).</li>
-                            <li>Managed HR operations support, ensuring timely resolution of tickets, calls, and emails.
-                            </li>
-                            <li>Facilitated cross-functional coordination to resolve technical and operational issues
-                                efficiently.</li>
-                            <li>Maintained high levels of user satisfaction through effective problem-solving and
-                                communication.</li>
-                        </ul>
+                        <div class="card-body">
+                            <ul class="job-responsibilities">
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    <span>Provided comprehensive HRMS support covering modules such as Leave, Attendance, Payroll,
+                                    and Employee Self-Service (ESS).</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    <span>Managed HR operations support, ensuring timely resolution of tickets, calls, and emails.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    <span>Facilitated cross-functional coordination to resolve technical and operational issues
+                                    efficiently.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    <span>Maintained high levels of user satisfaction through effective problem-solving and
+                                    communication.</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Experience Item 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="job-header">
-                            <h3>Implementation Consultant Intern</h3>
-                            <span class="company">ZingHR</span>
-                            <span class="date">Jan 2025 – Oct 2025</span>
+                <div class="timeline-item" data-animate="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div class="company-logo">
+                                <img src="assets/images/ZingHr.png" alt="ZingHR Logo">
+                            </div>
+                            <div class="job-meta">
+                                <h3 class="job-title">Implementation Consultant Intern</h3>
+                                <span class="company-name">ZingHR</span>
+                                <div class="job-period">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>Jan 2025 – Oct 2025</span>
+                                </div>
+                            </div>
                         </div>
-                        <ul class="job-details">
-                            <li>Assisted in the end-to-end implementation of HRMS solutions for various clients.</li>
-                            <li>Conducted User Acceptance Testing (UAT) and managed data migration processes to ensure
-                                system integrity.</li>
-                            <li>Configured HR workflows to align with client policies and requirements.</li>
-                            <li>Coordinated with clients and internal teams to ensure successful project delivery and
-                                adoption.</li>
-                        </ul>
+                        <div class="card-body">
+                            <ul class="job-responsibilities">
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    <span>Assisted in the end-to-end implementation of HRMS solutions for various clients.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    <span>Conducted User Acceptance Testing (UAT) and managed data migration processes to ensure
+                                    system integrity.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    <span>Configured HR workflows to align with client policies and requirements.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-chevron-right"></i>
+                                    <span>Coordinated with clients and internal teams to ensure successful project delivery and
+                                    adoption.</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section">
+    <section id="skills" class="section skills-section">
         <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <span class="skill-tag">HR Operations</span>
-                <span class="skill-tag">Human Resources (HR)</span>
-                <span class="skill-tag">HRMS (ZingHR)</span>
-                <span class="skill-tag">Talent Acquisition</span>
-                <span class="skill-tag">Employee Engagement</span>
-                <span class="skill-tag">HRIS</span>
-                <span class="skill-tag">UAT</span>
-                <span class="skill-tag">Data Migration</span>
-                <span class="skill-tag">Employee Onboarding</span>
-                <span class="skill-tag">HR Documentation</span>
-                <span class="skill-tag">Stakeholder Management</span>
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-subtitle">What I Offer</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+            </div>
+            <div class="skills-container" data-animate="fade-up">
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-user-tie"></i>
+                        Core HR Skills
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+                            <span class="skill-name">HR Operations</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-users"></i></div>
+                            <span class="skill-name">HR Management</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-search"></i></div>
+                            <span class="skill-name">Talent Acquisition</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-heart"></i></div>
+                            <span class="skill-name">Employee Engagement</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-user-plus"></i></div>
+                            <span class="skill-name">Employee Onboarding</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-file-alt"></i></div>
+                            <span class="skill-name">HR Policies & Documentation</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-money-check-alt"></i></div>
+                            <span class="skill-name">Payroll Coordination</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-balance-scale"></i></div>
+                            <span class="skill-name">Compliance & Statutory Support</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-user-clock"></i></div>
+                            <span class="skill-name">Employee Lifecycle Management</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-laptop-code"></i>
+                        Technical Skills
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-desktop"></i></div>
+                            <span class="skill-name">HRMS (ZingHR)</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <span class="skill-name">HRIS</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-check-double"></i></div>
+                            <span class="skill-name">UAT</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-exchange-alt"></i></div>
+                            <span class="skill-name">Data Migration</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon"><i class="fas fa-handshake"></i></div>
+                            <span class="skill-name">Stakeholder Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools & Technologies Section -->
+    <section id="tools" class="section tools-section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-subtitle">What I Work With</span>
+                <h2 class="section-title">Tools & Technologies</h2>
+            </div>
+            <div class="tools-container" data-animate="fade-up">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <h3 class="tool-name">MS Excel</h3>
+                    </div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">VLOOKUP</span>
+                        <span class="tool-tag">XLOOKUP</span>
+                        <span class="tool-tag">IF</span>
+                        <span class="tool-tag">COUNTIF</span>
+                        <span class="tool-tag">Pivot Tables</span>
+                        <span class="tool-tag">HR Reports</span>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <h3 class="tool-name">MS Word</h3>
+                    </div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">HR Documentation</span>
+                        <span class="tool-tag">Offer Letters</span>
+                        <span class="tool-tag">Policies</span>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="fas fa-file-powerpoint"></i>
+                        </div>
+                        <h3 class="tool-name">MS PowerPoint</h3>
+                    </div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Training Decks</span>
+                        <span class="tool-tag">HR Presentations</span>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3 class="tool-name">HRMS Platforms</h3>
+                    </div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">ZingHR</span>
+                        <span class="tool-tag">Implementation</span>
+                        <span class="tool-tag">Support</span>
+                        <span class="tool-tag">HR Operations Workflows</span>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="tool-name">ATS & Job Portals</h3>
+                    </div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Naukri</span>
+                        <span class="tool-tag">LinkedIn Recruiter</span>
+                        <span class="tool-tag">Indeed</span>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="tool-name">Communication Tools</h3>
+                    </div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">MS Teams</span>
+                        <span class="tool-tag">Zoom</span>
+                        <span class="tool-tag">Outlook</span>
+                    </div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h3 class="tool-name">Google Workspace</h3>
+                    </div>
+                    <div class="tool-tags">
+                        <span class="tool-tag">Docs</span>
+                        <span class="tool-tag">Sheets</span>
+                        <span class="tool-tag">Slides</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="section bg-light">
+    <section id="education" class="section education-section">
         <div class="container">
-            <h2 class="section-title">Education</h2>
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-subtitle">My Academic Background</span>
+                <h2 class="section-title">Education</h2>
+            </div>
             <div class="education-grid">
-                <div class="education-card">
-                    <h3>MBA – Human Resources & Marketing</h3>
-                    <p class="institution">BMS Institute of Technology and Management</p>
-                    <p class="grade">CGPA: 8.23</p>
+                <div class="education-card" data-animate="fade-up">
+                    <div class="edu-card-accent"></div>
+                    <div class="edu-logo">
+                        <img src="assets/images/BMSIT.png" alt="BMSIT Logo">
+                    </div>
+                    <div class="edu-content">
+                        <span class="edu-degree-type">Post Graduate</span>
+                        <h3 class="edu-degree">MBA – Human Resources & Marketing</h3>
+                        <p class="edu-institution">
+                            <i class="fas fa-university"></i>
+                            BMS Institute of Technology and Management
+                        </p>
+                        <div class="edu-grade">
+                            <span class="grade-label">CGPA</span>
+                            <span class="grade-value">8.23</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="education-card">
-                    <h3>Bachelor of Commerce (B.Com)</h3>
-                    <p class="institution">Canara Vikaas First Grade College</p>
-                    <p class="grade">CGPA: 7.979</p>
+                <div class="education-card" data-animate="fade-up">
+                    <div class="edu-card-accent"></div>
+                    <div class="edu-logo">
+                        <img src="assets/images/Vikaas.png" alt="Vikaas College Logo">
+                    </div>
+                    <div class="edu-content">
+                        <span class="edu-degree-type">Under Graduate</span>
+                        <h3 class="edu-degree">Bachelor of Commerce (B.Com)</h3>
+                        <p class="edu-institution">
+                            <i class="fas fa-university"></i>
+                            Canara Vikaas First Grade College
+                        </p>
+                        <div class="edu-grade">
+                            <span class="grade-label">CGPA</span>
+                            <span class="grade-value">7.979</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
+    <section id="projects" class="section projects-section">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-subtitle">Featured Work</span>
+                <h2 class="section-title">Projects</h2>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
-                    <h3>SUNSYNC LED Bulb</h3>
-                    <p>Design Thinking Innovation project focused on creating energy-efficient, self-adjusting lighting
-                        solutions.</p>
+                <div class="project-card" data-animate="fade-up">
+                    <div class="project-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SUNSYNC LED Bulb</h3>
+                        <p class="project-description">Design Thinking Innovation project focused on creating energy-efficient, self-adjusting lighting
+                            solutions.</p>
+                        <div class="project-tags">
+                            <span class="tag">Innovation</span>
+                            <span class="tag">Design Thinking</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3>NANNY'S LOVE</h3>
-                    <p>Business Plan for a mobile application designed to connect parents with trusted childcare
-                        providers.</p>
+                <div class="project-card" data-animate="fade-up">
+                    <div class="project-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">NANNY'S LOVE</h3>
+                        <p class="project-description">Business Plan for a mobile application designed to connect parents with trusted childcare
+                            providers.</p>
+                        <div class="project-tags">
+                            <span class="tag">Business Plan</span>
+                            <span class="tag">Mobile App</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -194,23 +581,51 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-wrapper">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:vijjir5778@gmail.com">vijjir5778@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+919482275957">+91 9482275957</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/r-vijayalakshmi-40928a226" target="_blank">LinkedIn Profile</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Bangalore, India</span>
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-subtitle">Let's Connect</span>
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info" data-animate="fade-right">
+                    <p class="contact-intro">I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                    <div class="contact-cards">
+                        <a href="mailto:vijjir5778@gmail.com" class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">vijjir5778@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+919482275957" class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+91 9482275957</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/r-vijayalakshmi-40928a226" target="_blank" class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">LinkedIn Profile</span>
+                            </div>
+                        </a>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Bangalore, India</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -219,34 +634,172 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 R Vijayalakshmi. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/r-vijayalakshmi-40928a226" target="_blank"><i
-                        class="fab fa-linkedin"></i></a>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span>R<span class="logo-dot">.</span>Vijayalakshmi</span>
+                    <p>HR Professional</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/r-vijayalakshmi-40928a226" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:vijjir5778@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 R Vijayalakshmi. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Simple Intersection Observer for fade-in animations
-        document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('.section');
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, {
-                threshold: 0.1
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or default to light
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        
+        // Theme toggle click handler
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                backToTop.classList.add('visible');
+            } else {
+                navbar.classList.remove('scrolled');
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        const body = document.body;
+        
+        // Create overlay element
+        const overlay = document.createElement('div');
+        overlay.className = 'nav-overlay';
+        document.body.appendChild(overlay);
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+            body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Close menu when clicking overlay
+        overlay.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+            body.style.overflow = '';
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                body.style.overflow = '';
+            }
+        });
+        
+        // Close menu on resize to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                body.style.overflow = '';
+            }
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id], header[id]');
+        const navLinksList = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
             });
 
-            sections.forEach(section => {
-                observer.observe(section);
+            navLinksList.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('[data-animate]').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Back to top
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             });
         });
     </script>
-
 </body>
 </html>
