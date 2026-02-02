@@ -529,18 +529,30 @@ button {
 
 /* Mobile Navigation Overlay */
 .nav-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1000;
+    display: none;
 }
 
-.nav-overlay.active {
-    opacity: 1;
-    visibility: visible;
+@media (max-width: 768px) {
+    .nav-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: calc(100% - 280px);
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 1000;
+        pointer-events: none;
+    }
+
+    .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
 }
 
 /* Dark theme mobile menu - ensure solid background */
@@ -1681,7 +1693,19 @@ a.contact-card:hover {
 .footer-logo p {
     font-size: 0.8rem;
     color: var(--text-light);
-    margin-top: 5px;\n}\n\n.footer-social {\n    display: flex;\n    gap: 10px;\n}\n\n.footer-social a {\n    width: 40px;\n    height: 40px;\n    display: flex;\n    align-items: center;
+    margin-top: 5px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
     justify-content: center;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1912,16 +1936,19 @@ a.contact-card:hover {
         z-index: 1001;
         overflow-y: auto;
         border-left: 1px solid var(--border-color);
-        pointer-events: auto;
-    }
-
-    .nav-links li {
-        width: 100%;
-        pointer-events: auto;
+        pointer-events: auto !important;
     }
 
     .nav-links.active {
         right: 0;
+        pointer-events: auto !important;
+    }
+
+    .nav-links li {
+        width: 100%;
+        pointer-events: auto !important;
+        position: relative;
+        z-index: 1002;
     }
 
     .nav-link {
@@ -1935,12 +1962,16 @@ a.contact-card:hover {
         color: var(--text-primary);
         border: none;
         box-shadow: none !important;
-        display: block;
-        pointer-events: auto;
-        cursor: pointer;
+        display: block !important;
+        pointer-events: auto !important;
+        cursor: pointer !important;
         text-decoration: none;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+        -webkit-tap-highlight-color: rgba(59, 130, 246, 0.3);
         touch-action: manipulation;
+        position: relative;
+        z-index: 1003;
+        user-select: none;
+        -webkit-user-select: none;
     }
 
     .nav-link:hover {

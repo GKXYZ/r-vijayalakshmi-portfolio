@@ -701,41 +701,86 @@
         overlay.className = 'nav-overlay';
         document.body.appendChild(overlay);
         
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenuBtn.classList.toggle('active');
-            navLinks.classList.toggle('active');
-            overlay.classList.toggle('active');
-            body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-        });
-        
-        // Close menu when clicking overlay
-        overlay.addEventListener('click', () => {
+        // Function to close mobile menu
+        function closeMobileMenu() {
             mobileMenuBtn.classList.remove('active');
             navLinks.classList.remove('active');
             overlay.classList.remove('active');
             body.style.overflow = '';
+        }
+        
+        // Function to open mobile menu
+        function openMobileMenu() {
+            mobileMenuBtn.classList.add('active');
+            navLinks.classList.add('active');
+            overlay.classList.add('active');
+            body.style.overflow = 'hidden';
+        }
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
         });
+        
+        // Close menu when clicking overlay
+        overlay.addEventListener('click', closeMobileMenu);
 
-        // Close mobile menu on link click AND handle smooth scroll
+        // Handle nav link clicks - attach directly to each link
+        const allNavLinks = document.querySelectorAll('.nav-link');
+        allNavLinks.forEach(link => {
+            // Remove any existing listeners by cloning
+            const newLink = link.cloneNode(true);
+            link.parentNode.replaceChild(newLink, link);
+        });
+        
+        // Re-select and attach fresh handlers
         document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
+            link.addEventListener('click', function(e) {
                 e.preventDefault();
-                const href = link.getAttribute('href');
-                const target = document.querySelector(href);
+                e.stopPropagation();
                 
-                // Close menu first
-                mobileMenuBtn.classList.remove('active');
-                navLinks.classList.remove('active');
-                overlay.classList.remove('active');
-                body.style.overflow = '';
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
                 
-                // Scroll to target after a short delay to ensure body overflow is reset
-                if (target) {
+                // Close menu immediately
+                closeMobileMenu();
+                
+                // Scroll to section
+                if (targetSection) {
                     setTimeout(() => {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 100);
+                        const offsetTop = targetSection.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }, 50);
                 }
-            });
+            }, { passive: false });
+            
+            // Also handle touch events for mobile
+            link.addEventListener('touchend', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                // Close menu immediately
+                closeMobileMenu();
+                
+                // Scroll to section
+                if (targetSection) {
+                    setTimeout(() => {
+                        const offsetTop = targetSection.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }, 50);
+                }
+            }, { passive: false });
         });
         
         // Close menu on escape key
