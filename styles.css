@@ -531,9 +531,7 @@ button {
 .nav-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.6);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -1884,15 +1882,16 @@ a.contact-card:hover {
         width: 280px;
         height: 100vh;
         height: 100dvh;
-        background: var(--bg-card);
+        background: var(--bg-primary);
         flex-direction: column;
         padding: 90px 24px 30px;
         gap: 6px;
-        box-shadow: var(--shadow-xl);
+        box-shadow: -4px 0 30px rgba(0, 0, 0, 0.15);
         transition: right 0.3s ease;
         border-radius: 0;
         z-index: 1001;
         overflow-y: auto;
+        border-left: 1px solid var(--border-color);
     }
 
     .nav-links.active {
@@ -1903,9 +1902,17 @@ a.contact-card:hover {
         padding: 14px 18px;
         width: 100%;
         border-radius: var(--radius-md);
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        font-weight: 500;
         justify-content: flex-start;
         background: transparent;
+        color: var(--text-primary);
+        border: none;
+    }
+
+    .nav-link:hover {
+        background: var(--bg-tertiary);
+        color: var(--primary);
     }
 
     .nav-link.active {
