@@ -543,6 +543,23 @@ button {
     visibility: visible;
 }
 
+/* Dark theme mobile menu - ensure solid background */
+@media (max-width: 768px) {
+    [data-theme="dark"] .nav-links {
+        background-color: #0f172a !important;
+        background: #0f172a !important;
+    }
+    
+    [data-theme="dark"] .nav-link {
+        color: #f1f5f9;
+    }
+    
+    [data-theme="dark"] .nav-link:hover {
+        background: #1e293b !important;
+        color: #3b82f6;
+    }
+}
+
 /* Theme Toggle Button */
 .theme-toggle {
     width: 42px;
@@ -1882,13 +1899,16 @@ a.contact-card:hover {
         width: 280px;
         height: 100vh;
         height: 100dvh;
-        background: var(--bg-primary);
+        background-color: var(--bg-primary) !important;
+        background: var(--bg-primary) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
         flex-direction: column;
         padding: 90px 24px 30px;
         gap: 6px;
-        box-shadow: -4px 0 30px rgba(0, 0, 0, 0.15);
+        box-shadow: -4px 0 30px rgba(0, 0, 0, 0.2);
         transition: right 0.3s ease;
-        border-radius: 0;
+        border-radius: 0 !important;
         z-index: 1001;
         overflow-y: auto;
         border-left: 1px solid var(--border-color);
@@ -1905,18 +1925,20 @@ a.contact-card:hover {
         font-size: 0.95rem;
         font-weight: 500;
         justify-content: flex-start;
-        background: transparent;
+        background: transparent !important;
         color: var(--text-primary);
         border: none;
+        box-shadow: none !important;
     }
 
     .nav-link:hover {
-        background: var(--bg-tertiary);
+        background: var(--bg-tertiary) !important;
         color: var(--primary);
+        box-shadow: none !important;
     }
 
     .nav-link.active {
-        background: var(--gradient-primary);
+        background: var(--gradient-primary) !important;
         color: var(--white);
     }
 
