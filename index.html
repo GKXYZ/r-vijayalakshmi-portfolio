@@ -35,13 +35,13 @@
                 <span class="hamburger"></span>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link active" onclick="return navigateTo(event, 'home')">Home</a></li>
-                <li><a href="#about" class="nav-link" onclick="return navigateTo(event, 'about')">About</a></li>
-                <li><a href="#experience" class="nav-link" onclick="return navigateTo(event, 'experience')">Experience</a></li>
-                <li><a href="#skills" class="nav-link" onclick="return navigateTo(event, 'skills')">Skills</a></li>
-                <li><a href="#tools" class="nav-link" onclick="return navigateTo(event, 'tools')">Tools</a></li>
-                <li><a href="#education" class="nav-link" onclick="return navigateTo(event, 'education')">Education</a></li>
-                <li><a href="#contact" class="nav-link" onclick="return navigateTo(event, 'contact')">Contact</a></li>
+                <li><a href="#home" class="nav-link active" ontouchstart="navigateTo(event, 'home')" onclick="return navigateTo(event, 'home')">Home</a></li>
+                <li><a href="#about" class="nav-link" ontouchstart="navigateTo(event, 'about')" onclick="return navigateTo(event, 'about')">About</a></li>
+                <li><a href="#experience" class="nav-link" ontouchstart="navigateTo(event, 'experience')" onclick="return navigateTo(event, 'experience')">Experience</a></li>
+                <li><a href="#skills" class="nav-link" ontouchstart="navigateTo(event, 'skills')" onclick="return navigateTo(event, 'skills')">Skills</a></li>
+                <li><a href="#tools" class="nav-link" ontouchstart="navigateTo(event, 'tools')" onclick="return navigateTo(event, 'tools')">Tools</a></li>
+                <li><a href="#education" class="nav-link" ontouchstart="navigateTo(event, 'education')" onclick="return navigateTo(event, 'education')">Education</a></li>
+                <li><a href="#contact" class="nav-link" ontouchstart="navigateTo(event, 'contact')" onclick="return navigateTo(event, 'contact')">Contact</a></li>
             </ul>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                 <i class="fas fa-sun sun-icon"></i>
@@ -717,9 +717,17 @@
             body.style.overflow = 'hidden';
         }
         
-        // Global navigation function - called by onclick
+        // Global navigation function - called by onclick/ontouchstart
+        var isNavigating = false;
         window.navigateTo = function(e, sectionId) {
-            if (e) e.preventDefault();
+            // Prevent double-firing
+            if (isNavigating) return false;
+            isNavigating = true;
+            
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
             
             // Close menu first
             closeMobileMenu();
@@ -735,7 +743,10 @@
                         top: offsetTop,
                         behavior: 'smooth'
                     });
-                }, 100);
+                    isNavigating = false;
+                }, 150);
+            } else {
+                isNavigating = false;
             }
             
             return false;
@@ -751,6 +762,16 @@
         
         // Close menu when clicking overlay
         overlay.addEventListener('click', closeMobileMenu);
+        
+        // Also close menu when clicking anywhere outside the menu
+        document.addEventListener('click', function(e) {
+            if (navLinks.classList.contains('active')) {
+                // Check if click is outside menu and not on menu button
+                if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    closeMobileMenu();
+                }
+            }
+        });
         
         // Close menu on escape key
         document.addEventListener('keydown', (e) => {
